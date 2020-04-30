@@ -2,94 +2,81 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>WeatherApp</title>
+    <title><%=title%> </title>
     <!-- To add in order to scale the view for mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
-  <body>
+<body>
 
 
-
-      <div class="container-fluid px-0 ">
-
-
-         <nav class="navbar navbar-light bg-light w-100 px-3">
-          <a class="navbar-brand" href="#">
-            <img src="/images/train.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Ticktac
-          </a>
-          <div> 
-            <span class="navbar-text">
-            Connection
-          </span>
-          <span class="navbar-text">
-            My last trips
-          </span>
-        </div>
-        </nav>
-      </div>
-          <!-- SIGN UP AREA -->
-
-          <div class="container">
-            <div class="row" style="width: 100%; height: 200px;"></div>
-            <div class="row">
-
-              
-           
-  
-            <!-- SIGN IN AREA -->
-            
-  
-              <div class="formArea col-md-4 offset-md-2">
-                <h4 class="titleForm">Sign In</h4>
-  
-                <form action="/sign-in" method="POST">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1"></label>
-                    <input name="emailFromFront" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1"></label>
-                    <input name="passwordFromFront" type="password" class="form-control" placeholder="Password">
-                  </div>
-  
-                  <button type="submit" class="btn btn-info">Confirm</button>
-                </form>
-  
-              </div>
-              <div class="formArea col-md-4 ">
-                <h4 class="titleForm">Sign Up</h4>
-  
-                <form action="/sign-up" method="POST">
-                  <div class="form-group">
-                    <label for="exampleInputUsername"></label>
-                    <input name="usernameFromFront" type="text" class="form-control" placeholder="Name">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputUsername"></label>
-                    <input name="usernameFromFront" type="text" class="form-control" placeholder="Firstname">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1"></label>
-                    <input name="emailFromFront" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1"></label>
-                    <input name="passwordFromFront" type="password" class="form-control"  placeholder="Password">
-                  </div>
-  
-                  <button type="submit" class="btn btn-info">Confirm</button>
-                </form>
-              </div>
-              
-            </div>
-          </div>
+<!-- NAVBAR-->
+<div class="container-fluid px-0 ">
+  <nav class="navbar navbar-light bg-light w-100 px-3">
+    <a class="navbar-brand" href="/">
+      <img src="/images/train.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Ticktac
+    </a>
+    <div> 
+      <a href="#" >Connection</a>
+      <a href="#" >My last trips</a>
+    </div>
+  </nav>
+</div>
          
 
-        
-      
+
+
+  <!-- MAIN CONTAINER -->    
+  <div class="container">
+    <div class="row" style="width: 100%; height: 200px;"></div>
+    <div class="row">
+
+  <!-- SIGN IN AREA -->
+    <div class="formArea col-md-4 offset-md-2">
+      <h4 class="titleForm">Sign In</h4>
+      <form action="/sign-in" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1"></label>
+          <input name="emailFromFront" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1"></label>
+          <input name="passwordFromFront" type="password" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-info">Confirm</button>
+      </form>
+    </div>
+
+      <!-- SIGN UP AREA -->
+    <div class="formArea col-md-4 ">
+      <h4 class="titleForm">Sign Up</h4>
+      <form action="/sign-up" method="POST">
+        <div class="form-group">
+          <label for="exampleInputUsername"></label>
+          <input required name="nameFromFront" type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputUsername"></label>
+          <input required name="firstNameFromFront" type="text" class="form-control" placeholder="Firstname">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1"></label>
+          <input required name="emailFromFront" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1"></label>
+          <input required name="passwordFromFront" type="password" class="form-control"  placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-info">Confirm</button>
+      </form>
+    </div>
+
+
+
+  </div>
+</div>
 
 
 

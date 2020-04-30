@@ -4,28 +4,70 @@ var mongoose = require('mongoose');
 var journeyModel = require('../models/journey')
 var usersModel = require("../models/users")
 
-
-
-
 var city = ["Paris","Marseille","Nantes","Lyon","Rennes","Melun","Bordeaux","Lille"]
 var date = ["2018-11-20","2018-11-21","2018-11-22","2018-11-23","2018-11-24"]
 
 
-
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var title = "Log-in"
+  res.render('login', {title});
 });
+//-----------------------
 
-/* GET Login page. */
-router.get('/login', function(req, res, next) {
-  res.render('login');
+
+
+
+router.post('/sign-up', async function(req, res, next) {
+  var users = await usersModel.findOne(
+    { email: req.body.emailFromFront }
+  )
+
+ if(users == null){
+  var newUser = new usersModel ({
+    name: req.body.nameFromFront,
+    firstName: req.body.firstNameFromFront,
+    email: req.body.emailFromFront,
+    password: req.body.passwordFromFront,
+  })
+
+  var user = await newUser.save();
+ }
+
+
+
+  res.redirect('/');
 });
+//-----------------------
 
 
-// Remplissage de la base de donnée, une fois suffit
+
+
+
+
+router.post('/sign-in', async function(req, res, next) {
+  var users = await usersModel.findOne(
+    {
+      email : req.body.emailFromFront,
+      password: req.body.passwordFromFront
+    }
+  )
+  if(users){
+    res.redirect('/')
+  } else {
+    res.redirect('/')
+  }
+});
+//-----------------------
+
+
+
+
+
+
+
+
 router.get('/save', async function(req, res, next) {
-
+// Remplissage de la base de donnée, une fois suffit
   // How many journeys we want
   var count = 300
 
@@ -52,11 +94,16 @@ router.get('/save', async function(req, res, next) {
   }
   res.render('index', { title: 'Express' });
 });
+//------------------------
 
 
+
+
+
+
+router.get('/result',  function(req, res, next) {
 // Cette route est juste une verification du Save.
 // Vous pouvez choisir de la garder ou la supprimer.
-router.get('/result',  function(req, res, next) {
 
   // Permet de savoir combien de trajets il y a par ville en base
   for(i=0; i<city.length; i++){
