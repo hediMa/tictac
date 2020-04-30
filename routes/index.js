@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
+
 
 // useNewUrlParser ;)
 var options = {
@@ -11,13 +12,13 @@ var options = {
  };
 
 // --------------------- BDD -----------------------------------------------------
-mongoose.connect('mongodb+srv://XXXXXXXX:*********@XXXXXXXX-0hsfc.mongodb.net/Ticketac?retryWrites=true',
+mongoose.connect('mongodb+srv://adminWA:azerqsdf@cluster0-p80ml.mongodb.net/ticketac?retryWrites=true&w=majority',
    options,
    function(err) {
     if (err) {
       console.log(`error, failed to connect to the database because --> ${err}`);
     } else {
-      console.info('*** Database Ticketac connection : Success ***');
+      console.info('---------Connexion DB OK----------');
     }
    }
 );
