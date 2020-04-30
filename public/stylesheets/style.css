@@ -10,12 +10,17 @@ body {
   color: white;
 }
 
-/* #main {
-  display: flex;
-  flex-direction: row-reverse;
-  text-align: center;
+footer {
+  position: absolute;
+  bottom: 0;
 }
 
-.formArea {
-  margin: 15px;
-} */
+.navbar-text {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: auto;
+}

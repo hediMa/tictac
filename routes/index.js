@@ -48,6 +48,11 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
+/* GET Main page. */
+router.get('/main', function(req, res, next) {
+  res.render('mainpage');
+});
+
 
 // Remplissage de la base de donnée, une fois suffit
 router.get('/save', async function(req, res, next) {
