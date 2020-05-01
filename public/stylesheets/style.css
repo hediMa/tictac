@@ -35,3 +35,10 @@ h1 {
 .table {
   background-color: white;
 }
+
+.transparent {
+  background: transparent;
+  border: none;
+  color: white;
+  padding-left: 0;
+}
