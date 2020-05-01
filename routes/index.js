@@ -31,11 +31,10 @@ router.post('/sign-up', async function(req, res, next) {
   })
 
   var user = await newUser.save();
- }
-
-
-
+  res.redirect('/mainpage');
+ } else {
   res.redirect('/');
+ }
 });
 //-----------------------
 
@@ -52,12 +51,42 @@ router.post('/sign-in', async function(req, res, next) {
     }
   )
   if(users){
-    res.redirect('/')
+    res.render('mainpage')
   } else {
     res.redirect('/')
   }
 });
 //-----------------------
+
+
+
+
+
+
+
+
+router.post('/trajet', async function(req, res, next) {
+  var trajet = await journeyModel.find(
+    {
+      departure : req.body.departureFromFront,
+      arrival: req.body.arrivalFromFront,
+      date: new Date(req.body.departureDateFromFront)
+    }
+  )
+
+  console.log("------req.body-------", req.body)
+  console.log("-------trajet------", trajet)
+
+
+
+  if(trajet.length == 0){
+    res.render('oops')
+  } else {
+    res.render('trajetDispo')
+  }
+});
+//-----------------------
+
 
 
 
