@@ -93,6 +93,10 @@ router.get('/main', function(req, res, next) {
   res.render('mainpage');
 });
 
+/* GET Error page. */
+router.get('/error', function(req, res, next) {
+  res.render('error');
+});
 
 
 

@@ -8,6 +8,7 @@ body {
   background-color: red
 }
 
+
 .titleForm {
   color: white;
 }
@@ -25,4 +26,8 @@ footer {
 .logo {
   margin-right: auto;
   margin-left: auto;
+}
+
+h1 {
+  color: white;
 }
