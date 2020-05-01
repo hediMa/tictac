@@ -44,6 +44,7 @@ router.post('/sign-up', async function(req, res, next) {
 
 
 router.post('/sign-in', async function(req, res, next) {
+  var title = "Recherchez un trajet"
   var users = await usersModel.findOne(
     {
       email : req.body.emailFromFront,
@@ -51,7 +52,7 @@ router.post('/sign-in', async function(req, res, next) {
     }
   )
   if(users){
-    res.render('mainpage')
+    res.render('mainpage', {title})
   } else {
     res.redirect('/')
   }
@@ -73,12 +74,8 @@ router.post('/trajet', async function(req, res, next) {
       date: new Date(req.body.departureDateFromFront)
     }
   )
-
   console.log("------req.body-------", req.body)
   console.log("-------trajet------", trajet)
-
-
-
   if(trajet.length == 0){
     res.render('oops')
   } else {
