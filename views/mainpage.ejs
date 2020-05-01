@@ -1,61 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <!-- To add in order to scale the view for mobiles -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-  </head>
+  <%- include('head'); %>
   <body>
 
 
-      <!-- NAVBAR-->
-      <div class="container-fluid px-0 ">
-         <nav class="navbar navbar-light bg-light w-100 px-3">
-          <a class="navbar-brand" href="#">
-            <img src="/images/train.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Ticktac
-          </a>
-          <div> 
-            <span class="navbar-text">
-            Connection
-          </span>
-          <span class="navbar-text">
-            My last trips
-          </span>
-        </div>
-        </nav>
+     
+<%- include('navbar'); %>
+
+<!--MAIN -->
+<div class="container">
+  <div class="row" style="height: 150px;"></div>
+  <div class="row justify-content-center">
+    <form method="POST" action="/trajet" class="form-inline">
+      <div class="form-group mb-2">
+        <input required type="text" class="form-control" name="departureFromFront" placeholder="Au départ de : Paris, Marseille...">
       </div>
+      <div class="form-group mb-2 mr-0 ml-3">
+        <input required type="text" class="form-control" name="arrivalFromFront" placeholder="Destination: Lille, Nantes...">
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <input required type="date" class="form-control" name="departureDateFromFront">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2 px-4">Go</button>
+    </form>
 
-      <!--MAIN -->
-      <div class="container">
-        <div class="row" style="height: 150px;"></div>
-        <div class="row justify-content-center">
-          <form class="form-inline">
-            <div class="form-group mb-2">
-              <label for="staticEmail2" class="sr-only">Email</label>
-              <input type="date" class="form-control" id="inputPassword2" placeholder="Password">
-            </div>
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="inputPassword2" class="sr-only">Password</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary mb-2">Go</button>
-          </form>
-
-        </div>
+  </div>
       
-          <div class="row justify-content-center mt-4">
-            <img src="/images/landmark.png" width="200" height="200" class="logo"  alt="">
-          </div>
+  <div class="row justify-content-center mt-4">
+    <img src="/images/landmark.png" width="200" height="200" class="logo"  alt="">
+  </div>
      
       
       
 
           
 
-       
+  <%- include('footer'); %>
+
      
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title><%=title%> </title>
-    <!-- To add in order to scale the view for mobiles -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-  </head>
-<body>
+  <%- include('head'); %>
+<body> 
 
 
-<!-- NAVBAR-->
-<div class="container-fluid px-0 ">
-  <nav class="navbar navbar-light bg-light w-100 px-3">
-    <a class="navbar-brand" href="/">
-      <img src="/images/train.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      Ticktac
-    </a>
-    <div> 
-      <a href="#" >Connection</a>
-      <a href="#" >My last trips</a>
-    </div>
-  </nav>
-</div>
-         
-
-
-    
-      
-
-          
-
+  <%- include('navbar'); %>
   <!-- MAIN CONTAINER -->    
   <div class="container">
     <div class="row" style="width: 100%; height: 200px;"></div>
@@ -82,13 +55,14 @@
       
               
             </div>
-          </div>
+  </div>
          
 
         
-      
+  <%- include('footer'); %>
+
      
-       <footer>2019 LaCapsule</footer>
+ 
       
        
      
