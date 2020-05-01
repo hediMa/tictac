@@ -101,8 +101,15 @@ router.get('/error', function(req, res, next) {
   res.render('error');
 });
 
+/* GET My last trips page */ 
+router.get('/trips', function(req, res, next) {
+  res.render('mytrips');
+});
 
-
+/* GET My tickets page */
+router.get('/mytickets', function(req, res, next) {
+  res.render('mytickets');
+});
 
 router.get('/save', async function(req, res, next) {
 // Remplissage de la base de donnée, une fois suffit
