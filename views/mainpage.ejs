@@ -11,43 +11,33 @@
 
 
       <!-- NAVBAR-->
-      <div class="container-fluid px-0 ">
-         <nav class="navbar navbar-light bg-light w-100 px-3">
-          <a class="navbar-brand" href="#">
-            <img src="/images/train.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Ticktac
-          </a>
-          <div> 
-            <span class="navbar-text">
-            Connection
-          </span>
-          <span class="navbar-text">
-            My last trips
-          </span>
-        </div>
-        </nav>
-      </div>
+      <%- include('navbar'); %>
 
       <!--MAIN -->
       <div class="container">
         <div class="row" style="height: 150px;"></div>
+        <h2 class="titleForm row mb-4">One-way ticket :</h2>
         <div class="row justify-content-center">
           <form class="form-inline">
             <div class="form-group mb-2">
               <label for="staticEmail2" class="sr-only">Email</label>
-              <input type="date" class="form-control" id="inputPassword2" placeholder="Password">
+              <input type="text" class="form-control" id="inputPassword2" placeholder="From: Paris, Marseille..">
             </div>
             <div class="form-group mx-sm-3 mb-2">
               <label for="inputPassword2" class="sr-only">Password</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+              <input type="password" class="form-control" id="inputPassword2" placeholder="To: Lille, Nantes">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputPassword2" class="sr-only">Password</label>
+              <input type="date" class="form-control" id="inputPassword2" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary mb-2">Go</button>
           </form>
 
         </div>
       
-          <div class="row justify-content-center mt-4">
-            <img src="/images/landmark.png" width="200" height="200" class="logo"  alt="">
+          <div class="row justify-content-center mt-5">
+            <img src="/images/landmark.png" width="250" height="250" class="logo"  alt="">
           </div>
      
       
