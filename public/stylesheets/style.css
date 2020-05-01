@@ -31,3 +31,10 @@ footer {
 h1 {
   color: white;
 }
+
+.transparent {
+  background: transparent;
+  border: none;
+  color: white;
+  padding-left: 0;
+}

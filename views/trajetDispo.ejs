@@ -5,7 +5,39 @@
     <%- include('navbar'); %>
     
 
-    <div class="container"></div>
+    <div class="container ">
+      <div class="row justify-content-center mt-4 pt-4">
+        <div class="card transparent">
+          <div class="card-body transparent">
+            <h5 class="card-title">Ticket Available on :</h5>
+          </div>
+        </div>
+      </div>
+
+      <% for(var i=0;i<trajet.length;i++){
+        
+        %> 
+
+      <div class="row justify-content-center mb-2">
+        <div class="card col-12 col-md-8">
+          <div class="card-body d-flex align-items-center justify-content-between px-0">
+            <h5 class="card-title mb-0"><%=trajet[i].departure%> / <%=trajet[i].arrival%></h5>
+            <p class="card-text mb-0">Train departure at : <%=trajet[i].departureTime%></p>
+            <h4 class="card-text mb-0"><%=trajet[i].price%>€</h4>
+            <a href="#"><button type="button" class="btn btn-danger">OK</button></a>
+          </div>
+        </div>
+      </div>
+
+     
+     <% } %>
+
+
+
+
+    </div>
+    
+  
 
 
 

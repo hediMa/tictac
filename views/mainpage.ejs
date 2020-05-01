@@ -12,20 +12,17 @@
         <div class="row" style="height: 150px;"></div>
         <h2 class="titleForm row mb-4">One-way ticket :</h2>
         <div class="row justify-content-center">
-          <form class="form-inline">
+          <form class="form-inline" method="POST" action="/trajet">
             <div class="form-group mb-2">
-              <label for="staticEmail2" class="sr-only">Email</label>
-              <input type="text" class="form-control" id="inputPassword2" placeholder="From: Paris, Marseille..">
+              <input required type="text" class="form-control" placeholder="From: Paris, Marseille.." name="departureFromFront">
             </div>
             <div class="form-group mx-sm-3 mb-2">
-              <label for="inputPassword2" class="sr-only">Password</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="To: Lille, Nantes">
+              <input required type="text" class="form-control"  placeholder="To: Lille, Nantes" name="arrivalFromFront">
             </div>
             <div class="form-group mx-sm-3 mb-2">
-              <label for="inputPassword2" class="sr-only">Password</label>
-              <input type="date" class="form-control" id="inputPassword2" placeholder="Password">
+              <input required type="date" class="form-control" name="departureDateFromFront">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Go</button>
+            <button type="submit" class="btn btn-primary mb-2 px-4">Go</button>
           </form>
 
   </div>
